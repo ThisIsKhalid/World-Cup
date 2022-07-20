@@ -74,7 +74,6 @@ aside {
 aside > .active-content{
     color: white;
     border: 1px solid gray;
-    /* background-color: rgba(255, 68, 0, 0.877); */
     background-color: rgba(247, 58, 24, 0.911);
 }
 aside a {
