@@ -36,13 +36,56 @@ header {
     flex-direction: column;
     row-gap: 1em;   
 }
-.header-text button {
-    color: white;
-    font-weight: 700;
-    border: none;
-    border-radius: 7px;
-    background-color: red;
-    padding: 1em 2em;
+.header-button a {
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px;
+    margin: 10px 15px;
+    color: rgba(247, 58, 24, 0.911);
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: rgb(22, 22, 22);
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.header-button > a:hover {
+    background: rgba(247, 58, 24, 0.911);
+    color: #111;
+    box-shadow: 0 0 50px rgba(247, 58, 24, 0.911);
+    transition-delay: 0.5s;
+}
+.header-button > a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid rgba(247, 58, 24, 0.911);
+    border-left: 2px solid rgba(247, 58, 24, 0.911);
+    transition: 0.5s;
+}
+.header-button > a:hover::before{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+.header-button > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid rgba(247, 58, 24, 0.911);
+    border-right: 2px solid rgba(247, 58, 24, 0.911);
+    transition: 0.5s;
+}
+.header-button > a:hover::after{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0.5s;
 }
 .header-img {
     width: 50%;
@@ -196,6 +239,9 @@ hr{
 /* for Tablet version  */
 
 @media only  screen and (min-width: 577px) and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
     .full-content {
         flex-direction: column;
         align-items: center;
